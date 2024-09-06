@@ -26,12 +26,8 @@ bool systemChecks() {
 	else {
 		"Failed to load comsnap.dll";
 	} */
-
-	hasVMNetworkAdapter();
 	std::cout << "\nCore count: " << getNumProcessors();
-	hasVMDllsLoaded();
-	hasKnownFileName();
-	return (hasVMUsername() && hasVMDrive() && hasVMProcess() && hasVMMac());
+	return (hasVMDllsLoaded() || hasVMNetworkAdapter() || hasVMUsername() || hasVMDrive() || hasVMProcess() || hasVMMac() || hasKnownFileName()); //in any order
 }
 
 bool hasVMProcess() {
