@@ -7,5 +7,5 @@ bool timeChecks() {
     DWORD dCurrTime = GetTickCount64();
 
     std::cout << "\nSystem started " << (dCurrTime/60000) << " minutes ago.";
-    return false;
+    return ((dCurrTime/60000) < 10); //return true if the system started less than 10 minutes ago
 }
