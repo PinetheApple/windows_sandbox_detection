@@ -16,7 +16,5 @@ int main(void) {
 }
 
 bool isSandboxed() {
-    timeChecks();
-    userChecks();
-    return (systemChecks());
+    return (systemChecks() || userChecks() || timeChecks());
 }
